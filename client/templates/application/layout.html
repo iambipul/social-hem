@@ -1,0 +1,206 @@
+<template name="layout">
+  <nav class="container-fluid navbar navbar-default notFixedTop " role="navigation" id="slide-nav" >
+    <div class="row hem-header">
+      <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 col-xl-2 "></div>
+
+      <div class=" col-xs-64 col-sm-10 col-md-8 col-lg-8 col-xl-8" >
+        <div class="navbar-header">
+          <a class="navbar-toggle">
+            <span class="sr-only">Toggle Navigation</span>
+            <span style="margin-top: 13px;" class="hem-icon hem-burger"></span>
+          </a>
+          <div class="text-center">
+            <a itemtype="http://schema.org/Organization" itemprop="url" id="hemHeaderLogo" href="/">
+              <img class="hem-log" alt="Hem.com" src="//d1w8j6pmwcehqo.cloudfront.net/hem-splash/hem_logo_black_small_@2x.png?v=4" >
+            </a>
+
+            <span class="hidden-sm hidden-md hidden-lg floatRight cartIconXS subnavCart">
+              <a href= http://hem.com/en-gb/cart?ref=stl.customize.cart_sub>
+                <span class="quantity_update"> Cart</span>
+              </a>
+             </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-51 col-md-53 col-lg-53 col-xl-53">
+        <div id="slidemenu" class="row sildeMenuXS">
+
+          <!--First Ul Start-->
+          <ul class="nav navbar-nav hoverStyling auto-adjust-subnav">
+            <li class="dropdown subnavDropDown" id="subnavShop"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-dropdown-section="#sectionShopDropdown">Shop
+              <b class="caret hidden-xs"></b> <span class="hem-icon hem-plus hidden-sm hidden-md hidden-lg floatRight"></span></a>
+              <ul class="dropdown-menu hidden-sm hidden-md hidden-lg">
+                <li><a href="/en-gb/shop/furniture/?ref=stl.customize.shop_sub" >Furniture</a></li>
+                <li><a href="/en-gb/shop/lighting/?ref=stl.customize.shop_sub" >Lighting</a></li>
+                <li><a href="/en-gb/shop/accessories/?ref=stl.customize.shop_sub" >Accessories</a></li>
+                <li><a href="/en-gb/product/10154/?ref=stl.customize.shop_sub">Storm</a></li>
+                <li><a href="/en-gb/product/10131/?ref=stl.customize.shop_sub">Hai Chair</a></li>
+              </ul>
+            </li>
+            <hr class=" hidden-sm hidden-md hidden-lg">
+
+            <!--Customize based on region-->
+            <li class="dropdown subnavDropDown" id="subnavCustomize"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-dropdown-section="#sectionCustomizeDropdown">Design Your Own
+              <b class="caret hidden-xs"></b> <span class="hem-icon hem-plus hidden-sm hidden-md hidden-lg floatRight"></span></a>
+              <ul class="dropdown-menu hidden-sm hidden-md hidden-lg">
+                <li><a href="/en-gb/customize-storage/?ref=stl.customize.cust_sub">Storage</a></li>
+                <li><a href="/en-gb/customize-tables/?ref=stl.customize.cust_sub">Tables</a></li>
+                <li><a href="/en-gb/customize-seating/?ref=stl.customize.cust_sub">Seating</a></li>
+                <!--<li><a href="/en-gb/customize-other-furniture/?ref=stl.customize.cust_sub">Other Furniture</a></li>-->
+              </ul>
+            </li>
+
+            <hr class=" hidden-sm hidden-md hidden-lg">
+
+            <li  id="subnavDesigner">
+              <a href="/en-gb/designers?ref=stl.customize.des_sub"> Designers</a>
+            </li>
+
+            <hr class=" hidden-sm hidden-md hidden-lg">
+
+            <li class=" hidden" id="subnavRetailer">
+              <a href="#">Find A Hem Retailer</a>
+            </li>
+
+            <hr class=" hidden hidden-sm hidden-md hidden-lg">
+          </ul>
+          <!--First Ul end-->
+
+          <!--Second Ul Start-->
+          <div class="navigationBarAlign" role="form">
+            <ul class="nav navbar-nav hoverStyling" style="margin-top: 0px;">
+              <li class="hidden-xs">
+              <li class="dropdown btn-group subNavHeaderStyling hidden-xs" >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
+                  <b class="caret hidden-xs"></b></a>
+                <ul class="dropdown-menu" style="width:140%;">
+                  <li><a href="/en-gb/account-show?ref=stl.customize.hd_setting"> Settings </a></li>
+                  <li><a href="/en-gb/logout">Sign Out</a></li>
+                </ul>
+              </li>
+              </li>
+
+              <li class="hidden-xs subnavCart dropdown">
+                <a id = "cartOnweb" class="dropdown-toggle" data-cart-section="?ref=stl.customize.cart_sub" data-toggle="dropdown" href="javascript:void(0);">
+                  <span class="quantity_update"> Cart</span>
+                  <b class="caret hidden-xs"></b>
+                </a>
+                <ul class="dropdown-menu cartContent"></ul>
+              </li>
+
+              <li class="dropdown btn-group subNavHeaderStyling subnavDropDown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">EN
+                <b class="caret hidden-xs"></b> <span class="hem-icon hem-plus hidden-sm hidden-md hidden-lg floatRight"></span></a>
+                <ul class="dropdown-menu">
+                  <!--Dont remove this ref7 out of loop-->
+                  <li role="presentation" >
+                    <a class="widthp1" role="menuitem" tabindex="-1" href=/en-gb/change-language/?ref=stl.customize.hd.ol=en-gb.nl=en-gb> EN </a>
+                  </li>
+                  <!--Dont remove this ref7 out of loop-->
+                  <li role="presentation" >
+                    <a class="widthp1" role="menuitem" tabindex="-1" href=/de/change-language/?ref=stl.customize.hd.ol=en-gb.nl=de> DE </a>
+                  </li>
+                  <!--Dont remove this ref7 out of loop-->
+                  <li role="presentation" >
+                    <a class="widthp1" role="menuitem" tabindex="-1" href=/fr/change-language/?ref=stl.customize.hd.ol=en-gb.nl=fr> FR </a>
+                  </li>
+                </ul>
+              </li>
+              <hr class=" hidden-sm hidden-md hidden-lg">
+
+              <li class="hidden-sm hidden-md hidden-lg">
+                <a href="/en-gb/account-show?ref=stl.customize.hd_setting">Settings</a>
+              </li>
+              <hr class=" hidden-sm hidden-md hidden-lg">
+              <li class="hidden-sm hidden-md hidden-lg">
+                <a href="/en-gb/logout">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+          <!--Second Ul End-->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="feed">
+  {{> yield}}
+  </div>
+
+  <div class="row footerlinks">
+    <!-- 1. About Hem Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link">About Hem</h4>
+
+      <h4 class="child-link text-2"><a href="/en-gb/contact/?ref=browse.1.ft_offices">Offices</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/stores/?ref=browse.1.ft_store"> Find A Hem Store</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/retail-partners/?ref=browse.1.ft_retailer">Find A Hem Retailer</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/careers/?ref=browse.1.ft_careers">Careers</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/press/?ref=browse.1.ft_press">Press</a></h4>
+    </div>
+    <!-- 2. Partners Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link"> Partners  </h4>
+
+      <h4 class="child-link text-2"><a href="/en-gb/retail-partners/?ref=browse.1.ft_wholesale">Wholesale</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/business-solutions/?ref=browse.1.ft_arch-des">Architects &amp; Designers</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/business-solutions/?ref=browse.1.ft_bus-sol">Business &amp; Office Solutions</a></h4>
+    </div>
+    <div class="visible-xs visible-sm clearfix"></div>
+    <!-- 3. support Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link"> Support </h4>
+      <h4 class="child-link text-2"><a href="/en-gb/faq/?ref=browse.1.ft_faq">FAQ</a></h4>
+      <h4 class="child-link text-2"><a data-contact-option="customer_service" data-target="#contactUsModal" data-toggle="modal" href="javascript:void(0)">Customer Support</a></h4>
+      <h4 class="child-link text-2"><a data-contact-option="customized_furniture" data-target="#contactUsModal" data-toggle="modal" href="javascript:void(0)">Contact A Sales Consultant</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/shipping-policy/?ref=browse.1.ft_ship-ret">Shipping &amp; Return Policy</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/contact/?ref=browse.1.ft_contact-us">Contact Us</a></h4>
+    </div>
+    <!-- 4. Shop Section -->
+    <div class="col-xs-31 col-sm-32 col-md-10 col-lg-12">
+      <h4 class="parent-link"> Shop </h4>
+      <h4 class="child-link text-2"><a href="/en-gb/shop/furniture/?ref=browse.1.ft_furniture">Furniture</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/shop/lighting/?ref=browse.1.ft_lighting">Lighting</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/shop/accessories/?ref=browse.1.ft_accessories">Accessories</a></h4>
+      <h4 class="child-link text-2"><a href="/en-gb/customize/?ref=browse.1.ft_cust-fur">Customisable Furniture</a></h4>
+    </div>
+    <div style="margin: 20px 0;" class="visible-xs visible-sm clearfix"></div>
+
+    <div class="col-xs-64 col-md-8 col-lg-6">
+      <div class="tsbp-container">
+        <a target="_blank" href="https://www.trustedshops.com/shop/certificate.php?shop_id=XA2ED2C7100AD4E5E1E2EAF745C8F5DE5">
+          <div style="padding-top: 8px" class="hidden-xs hidden-sm">
+            <div style="width:70px;height:50px;text-align: center">
+              <img src="//d1w8j6pmwcehqo.cloudfront.net/assets/icons/trusted_shops.png" style="width: 50px;height: 50px">
+            </div>
+            <div style="max-width: 100px" class="text-3">
+              <span style="margin-bottom: 5px; display: inline-block" class="circular-medium">Certificated by Trusted Shops </span><br> Buyer Protection, data protection, secure payment.
+            </div>
+          </div>
+          <div class="hidden-md hidden-lg hidden-xl">
+            <img src="//d1w8j6pmwcehqo.cloudfront.net/assets/icons/trusted_shops.png" style="width: 60px;height: 60px">
+            <div style="display: inline-block;max-width: 170px;margin: 5px 10px" class="text-3">
+              <span style="margin-bottom: 5px; display: inline-block" class="circular-medium">Certificated by Trusted Shops </span><br> Buyer Protection, data protection, secure payment.
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row visible-only-xs split-footer-xs"></div>
+    <div class="col-xs-64 text-center">
+      <h4 style="margin: 10px 0" class="parent-link text-1"><small>Hem means home. We’re building the new global home for design online from our offices in:<br>Berlin (headquarters) &ndash; Stockholm &ndash; Helsinki &ndash; Warsaw &ndash; New York &ndash; Pune </small></h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div style="margin-top: 10px" class="hidden-xs col-sm-64 col-md-64 col-lg-64 col-xl-64 split-footer"></div>
+  </div>
+
+  <div class="row hidden-xs">
+    <div class="col-sm-64 text-center">
+      <span style="margin: 0 20px"><a href="/en-gb/terms/?ref=browse.1.ft_terms-service">Terms Of Service</a></span>
+      <span style="margin: 0 20px"><a href="/en-gb/privacy-policy/?ref=browse.1.ft_privacy-policy">Privacy Policy </a></span>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,1 @@
+Meteor.subscribe('product_feeds');
