@@ -1,0 +1,72 @@
+// We need 64 (YES THATS RIGHT ::: 64 COLUMNS!)
+$grid-columns: 64;
+
+// Grids are to have 8px margin between them
+$grid-gutter-width: 8px;
+
+
+$screen-xs: 320px;
+$screen-xs-min: 1px;
+$screen-xs-max: 600px;
+$screen-phone: $screen-xs-min;
+
+$screen-sm: 601px;
+$screen-sm-min: 601px;
+$screen-sm-max: 1023px;
+$screen-tablet: $screen-sm-min;
+
+$screen-md: 1024px;
+$screen-md-min: 1024px;
+$screen-md-max : 1200px;
+$screen-desktop: $screen-md-min;
+
+$screen-lg: 1201px;
+$screen-lg-min: 1201px;
+$screen-lg-max: 1679px;
+$screen-lg-desktop: $screen-lg-min;
+
+$screen-xl: 1680px;
+$screen-xl-min: 1680px;
+$screen-imac: $screen-xl-min;
+
+
+$container-xs: 318px;
+$container-sm: 584px;
+$container-md: 954px;
+$container-lg: 1201px;
+$container-xl: 1664px;
+
+$sprite-retina-location: "//d1w8j6pmwcehqo.cloudfront.net/assets/sprites/sprite-hem-retina-v23.png";
+$sprite-location: "//d1w8j6pmwcehqo.cloudfront.net/assets/sprites/sprite-hem-v23.png";
+
+// Navbar overrides
+$navbar-default-bg: #FFFFFF;
+
+// Primary - Black
+$hem-color-1     : #050500;
+
+// Secondary - Golden
+$hem-color-2     : #F9B146;
+
+// Middle Gray
+$hem-color-3     : #E5E5E5;
+
+// Light Gray
+$hem-color-4     : #F2F2F2;
+
+// Error
+$hem-color-5     : #DA524E;
+
+$hem-color-6     : #FFFFFF;
+
+// Tertiary - Ochre-ish
+$hem-color-7     : #F4A145;
+
+// Dark Gray
+$hem-color-8     : #9A9998;
+
+// Success
+$hem-color-9     : #44944C;
+
+// some sort of gray
+$hem-color-10    : #CCCCCB;

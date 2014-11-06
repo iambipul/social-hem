@@ -1,0 +1,136 @@
+@import "fab-variables.css.scss";
+
+.btn-config {
+  background: #dd0017;
+  border-color: #dd0017;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.split-footer{
+  border-bottom: 1px solid $hem-color-3;
+  margin : 30px 0 25px 0;
+}
+
+.tsbp-container {
+  a {
+    display: inline-block;
+    text-decoration: none;
+
+    div.text-3 {
+      vertical-align: middle;
+    }
+  }
+  @media (max-width:$screen-md-max){
+    text-align: center;
+
+    & div{
+      text-align: left;
+    }
+  }
+}
+
+.split-footer-sm-md{
+  margin-bottom: 35px;
+}
+
+.split-footer-xs{
+  margin: 2% 0;
+}
+
+.share-box{
+  //  border: 1px solid #a0a0a0;
+  //  text-align: center;
+}
+
+.btn-group-country{
+  vertical-align: top;
+}
+
+.child-link{
+  font-weight: normal;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.child-link a{
+  text-decoration: none;
+}
+
+.child-link a:hover {
+  color: $hem-color-2;
+}
+
+.parent-link{
+  font-weight: normal;
+}
+
+.parent-link a{
+  text-decoration: none;
+}
+
+#contactUsPhone, #contactUsLocation{margin-bottom: 2%; display: none;}
+
+
+#countrySelect {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+  #country_box{margin-bottom: 2%;}
+  #fb_share{margin-left: 1%;}
+  #contactUsSubmit, #contactUsEmail{margin-bottom: 2%;}
+  #btnSignUp{
+    padding: 5px;
+  }
+  .parent-link, .child-link{
+    margin-left:  2%;
+  }
+}
+
+#scrollTotop{
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  bottom:40px;
+  right:40px;
+  @media (max-width:$screen-xs-max){
+    bottom:20px;
+    right:20px;
+  }
+}
+
+#scrollTotop span{
+  background-color: #ffffff;
+}
+
+.hemfooter #country_box div.dropdown-menu.open{
+  bottom: 95%;
+}
+
+.footerlinks div{
+  margin-bottom: 10px;
+}
+
+#country_box .bootstrap-select{
+  & div.dropdown-menu{
+    max-height: 185px;
+    height: 185px;
+  }
+  & ul.dropdown-menu{
+    height: 100%;
+  }
+}
+
+.btn.dropdown-toggle{
+  box-shadow: none!important;
+  &:active,&:focus,&:hover{
+    box-shadow: none!important;
+  }
+  &.disabled{
+    box-shadow: none!important;
+  }
+}

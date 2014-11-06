@@ -1,1 +1,0 @@
-ProductFeeds = new Meteor.Collection("product_feeds");

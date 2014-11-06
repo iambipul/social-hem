@@ -1,0 +1,105 @@
+@import "fab-variables.css.scss";
+
+@mixin heading-1 {
+  @extend .circular-book;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: $hem-color-1;
+}
+
+@mixin heading-2 {
+  @extend .circular-book;
+  font-size: 2em;
+  line-height: 1.3em;
+  color: $hem-color-1;
+}
+
+@mixin heading-3 {
+  @extend .circular-book;
+  font-size: 1.75em;
+  line-height: 1.3em;
+  color: $hem-color-1;
+}
+
+@mixin heading-4 {
+  @extend .circular-medium;
+  font-size: 1.125em;
+  margin-bottom: 0.25em;
+  color: $hem-color-1;
+}
+
+@mixin heading-4-contrast {
+  @extend .heading-4;
+  color: $hem-color-6;
+}
+
+@mixin heading-5 {
+  @extend .circular-book;
+  font-size: 1.025em;
+  margin-bottom: 0.25em;
+  color: $hem-color-1;
+}
+
+@mixin heading-6 {
+  @extend .circular-medium;
+  font-size: 14px;
+  margin-bottom: 0.25em;
+  color: $hem-color-1;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+@mixin heading-7 {
+  @extend .circular-medium;
+  font-size: 16px;
+  margin-bottom: 0.25em;
+  color: $hem-color-1;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+@mixin heading-8 {
+  @extend .circular-medium;
+  font-size: 12px;
+  margin-bottom: 0.25em;
+  color: $hem-color-1;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+@mixin text-1 {
+  @extend .circular-book;
+  font-size: 1.125em;
+  line-height: 1.4375em;
+  color: $hem-color-1;
+}
+
+@mixin text-2 {
+  @extend .circular-book;
+  font-size: 1em;
+  line-height: 1.625em;
+  color: $hem-color-1;
+}
+
+@mixin text-3 {
+  @extend .circular-book;
+  font-size: 1em;
+  line-height: 1.4em;
+  color: $hem-color-1;
+}
+
+@mixin text-danger {
+  color: $hem-color-5;
+}
+
+@mixin text-success {
+  color: $hem-color-9;
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin break-all-word{
+  word-break: break-all;
+}

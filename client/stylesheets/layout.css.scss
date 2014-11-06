@@ -1,0 +1,58 @@
+@import "fab-variables.css.scss";
+/*
+    Document   : layout
+    Created on : Aug 11, 2014, 6:00:17 PM
+    Author     : abhimanyusaxena
+    Description:
+        This CSS is suppoed to define the page level layouts. Positions Header
+        and footer. CSS of header and footer are kept in their respective folders.
+*/
+
+/*
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+$hem-footer-height : 240px;
+$hem-header-height : 58px;
+html, body{
+  height: 100%;
+}
+
+#hemWrapper{
+  min-height: 100%;
+}
+
+#hemWrapper:after {
+  content: "";
+  display: block;
+}
+
+.hemfooter{
+  /* .push must be the same height as footer */
+  min-height: $hem-footer-height;
+  background-color: $hem-color-4;
+  margin-top: 40px;
+  padding: 40px 0 30px 0;
+}
+
+.hemHeader{
+  height: $hem-header-height;
+}
+
+.profiler-results{
+  display:none;
+}
+
+.noPadding{
+  padding: 0px;
+}
+
+.hero-image{
+  position: relative;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  @media (max-width:$screen-xs-max){
+    max-height: 675px;
+  }
+  max-height: 450px;
+}

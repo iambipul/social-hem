@@ -1,0 +1,320 @@
+@import "fab-variables.css.scss";
+@import "typography-mixins.css.scss";
+
+body {
+  font-family: "LLCircularWeb-Medium", Helvetica;
+  color: #000;
+}
+
+.circular-black {
+  font-family: "LLCircularWeb-Black", Helvetica;
+}
+
+.circular-medium {
+  font-family: "LLCircularWeb-Medium", Helvetica;
+}
+
+.circular-medium-italic {
+  font-family: "LLCircularWeb-Mediumitalic", Helvetica;
+}
+
+.circular-book {
+  font-family: "LLCircularWeb-Book", Helvetica;
+}
+.circular-bold{
+  font-family: "LLCircularWeb-Bold", Helvetica;
+  font-weight: normal;
+}
+
+.hem-color-1{
+  color: $hem-color-1 !important;
+}
+.hem-color-2{
+  color: $hem-color-2 !important;
+}
+.hem-color-3{
+  color: $hem-color-3 !important;
+}
+.hem-color-4{
+  color: $hem-color-4 !important;
+}
+.hem-color-5{
+  color: $hem-color-5 !important;
+}
+.hem-color-6{
+  color: $hem-color-6 !important;
+}
+
+.heading-1 {
+  @include heading-1();
+}
+
+.heading-2 {
+  @include heading-2();
+}
+
+.heading-3 {
+  @include heading-3();
+}
+
+.heading-4 {
+  @include heading-4();
+}
+
+.heading-4-contrast {
+  @include heading-4-contrast();
+}
+
+.heading-5 {
+  @include heading-5();
+}
+
+.heading-6 {
+  @include heading-6();
+}
+
+.heading-7{
+  @include heading-7();
+}
+
+.heading-8{
+  @include heading-8();
+}
+
+.text-1{
+  @include text-1();
+}
+
+.text-2 {
+  @include text-2();
+}
+
+.text-3 {
+  @include text-3();
+}
+
+.text-danger {
+  @include text-danger();
+}
+
+.text-success {
+  @include text-success();
+}
+
+.hover.text-3, .hover.text-1, .hover .text-1{
+  color: $hem-color-6;
+}
+
+a {
+  @extend .circular-medium;
+  font-size: .813em;
+  color: $hem-color-1;
+  text-decoration: underline;
+  outline: none;
+  &:hover{
+    color: $hem-color-2;
+    outline: none;
+  }
+  &:active{
+    color: $hem-color-7;
+    outline: none;
+  }
+}
+
+p a{
+  @extend a;
+  font-size: 1em;
+}
+
+.navbar a{
+  @extend a;
+  text-transform: capitalize;
+  font-size: 0.875;
+  text-decoration: none;
+}
+
+
+.break-all-word{
+  @include break-all-word();
+}
+
+// Styles for the dropdown text
+// @Biswarup
+// Refer: https://fabcom.atlassian.net/wiki/pages/viewpage.action?pageId=3375255#UserInputs(Patterns)-Dropdowns
+.dropdown-option-text {
+  @extend .circular-medium;
+  font-size: 1em;
+  line-height: 25px;
+  text-decoration: none;
+  background-color: white;
+
+  &:hover {
+    color: $hem-color-7;
+    background-color: white;
+  }
+}
+
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * hem.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2014
+ */
+
+@font-face {
+  font-family: "LLCircularWeb-Black";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-black-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-black-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-black-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-black-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-black-s.svg?v=1#LLCircularWeb-Black") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Blackitalic";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-blackitalic-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-blackitalic-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-blackitalic-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-blackitalic-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-blackitalic-s.svg?v=1#LLCircularWeb-Blackitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Bold";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bold-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bold-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bold-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bold-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bold-s.svg?v=1#LLCircularWeb-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Bolditalic";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bolditalic-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bolditalic-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bolditalic-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bolditalic-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bolditalic-s.svg?v=1#LLCircularWeb-Bolditalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Book";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-book-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-book-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-book-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-book-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-book-s.svg?v=1#LLCircularWeb-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Bookitalic";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bookitalic-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bookitalic-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bookitalic-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bookitalic-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-bookitalic-s.svg?v=1#LLCircularWeb-Bookitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Medium";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-medium-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-medium-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-medium-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-medium-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-medium-s.svg?v=1#LLCircularWeb-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*Italics Version*/
+@font-face {
+  font-family: "LLCircularWeb-Medium";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.svg?v=1#LLCircularWeb-Mediumitalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "LLCircularWeb-Mediumitalic";
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.eot?v=1");
+  src:    url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.eot?v=1#iefix") format("embedded-opentype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.woff?v=1") format("woff"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.ttf?v=1") format("truetype"),
+  url("//d1w8j6pmwcehqo.cloudfront.net/assets/fonts/hem/lineto-circular-mediumitalic-s.svg?v=1#LLCircularWeb-Mediumitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.success-msg{
+  @extend .text-3;
+  color: $hem-color-9;}
+
+.error-msg{
+  @extend .text-3;
+  color: $hem-color-5;}
+.carousel-caption{text-shadow:none;}
+
+@mixin hero-banner($fontsiz,$height){
+  .banner-text{
+    width:100%;
+    position: absolute;
+    top:50%;
+    margin-top: -$height/2;
+    height: $height;
+    text-align: center;
+    z-index: 12;
+
+    & span{
+      font-family: "LLCircularWeb-Book", Helvetica;
+      font-size: $fontsiz;
+      background-color: $hem-color-6;
+      color:  $hem-color-1;
+      height: $height;
+      padding: 0 30px;
+      line-height:$height;
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  @include hero-banner(18px,40px);
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+  @include hero-banner(24px,47px);
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include hero-banner(27px,55px);
+}
+
+@media (min-width: $screen-lg-min){
+  @include hero-banner(45px,70px);
+}
+
+
