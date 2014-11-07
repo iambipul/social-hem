@@ -67,4 +67,71 @@
   <div class="feed">
     {{> yield}}
   </div>
+
+ <div class="container-fluid hemfooter">
+  <div class="container">
+    <div class="row footerlinks">
+    <!-- 1. About Hem Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link">About Hem</h4>
+
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/contact?ref=feed">Offices</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/stores?ref=feed">Find A Hem Store</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/retail-partners?ref=feed">Find A Hem Retailer</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/careers?ref=feed">Careers</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/press?ref=feed">Press</a></h4>
+    </div>
+    <!-- 2. Partners Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link"> Partners </h4>
+
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/retail-partners?ref=feed">Wholesale</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/business-solutions?ref=feed">Architects & Designers</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/business-solutions?ref=feed">Business & Office Solutions</a></h4>
+    </div>
+    <div class="visible-xs visible-sm clearfix"></div>
+    <!-- 3. support Section -->
+    <div class="col-xs-31 col-sm-32 col-md-15 col-lg-15">
+      <h4 class="parent-link">Support</h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/faq?ref=feed">FAQ</a></h4>
+      <h4 class="child-link text-2"><a href="javascript:void(0)" data-toggle="modal" data-target="#contactUsModal" data-contact-option="customer_service">Customer Support</a></h4>
+      <h4 class="child-link text-2"><a href="javascript:void(0)" data-toggle="modal" data-target="#contactUsModal" data-contact-option="customized_furniture">Contact A Sales Consultant</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/shipping-policy?ref=feed">Shipping & Return Policy</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/contact?ref=feed">Contact Us</a></h4>
+    </div>
+    <!-- 4. Shop Section -->
+    <div class="col-xs-31 col-sm-32 col-md-10 col-lg-15">
+      <h4 class="parent-link">Shop</h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/shop/furniture?ref=feed">Furniture</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/shop/lighting?ref=feed">Lighting</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/shop/accessories?ref=feed">Accessories</a></h4>
+      <h4 class="child-link text-2"><a href="/{{pagePref.locale_name}}/customize?ref=feed">Customisable Furniture</a></h4>
+    </div>
+    <div class="visible-xs visible-sm clearfix" style="margin: 20px 0;"></div>
+
+    <!--<%# 5. Trusted Shops Buyers Protection %>-->
+    <!--<% if Region.find(@page_pref.region_pref).eu_region? %>-->
+    <!--<div class="col-xs-64 col-md-8 col-lg-6">-->
+      <!--<%= render partial: "web/cart/shared/trusted_shops_logo_and_copy"%>-->
+    <!--</div>-->
+    <!--<% end %>-->
+
+    <!-- 5. Events Section -->
+    <!--<div class="col-xs-32 col-sm-22 col-md-22 col-lg-14 col-xl-14">
+      <h4 class="parent-link"> #<#%=t "footer.upcomingEvents"%> </h4>
+
+      <h4 class="child-link text-2"><a href="#"><#%=t "footer.event1"%></a></h4>
+      <h4 class="child-link text-2"><a href="#"><#%=t "footer.event2"%></a></h4>
+      <h4 class="child-link text-2"><a href="#"><#%=t "footer.event3"%></a></h4>
+    </div>-->
+    <div class="row visible-only-xs split-footer-xs"></div>
+    <div class="col-xs-64 text-center">
+      <h4 class="parent-link text-1" style="margin: 10px 0">
+        <small>Hem means home. We’re building the new global home for design online from our offices in:
+         <br/>
+        Berlin (headquarters) – Stockholm – Helsinki – Warsaw – New York – Pune  </small></h4>
+    </div>
+  </div>
+  </div>
+ </div>
 </template>
