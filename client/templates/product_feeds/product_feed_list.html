@@ -1,3 +1,16 @@
 <template name="productFeedList">
-  <div>Hello there</div>
+  <div id="hemWrapper">
+    <div class="container-fluid">
+      <div class="row browsedescription">Feeds</div>
+      <div class="row">
+        {{#each productFeeds}}
+         {{#if this.first_in_a_row}}
+          {{> productFeedFirst}}
+         {{else}}
+          {{> productFeedOther}}
+         {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
 </template>
