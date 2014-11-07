@@ -1,16 +1,57 @@
 <template name="productFeedList">
-  <div id="hemWrapper">
-    <div class="container-fluid">
-      <div class="row browsedescription">Feeds</div>
-      <div class="row">
+  <div class="wrapper">
+  <div class="timelineContainer">
         {{#each productFeeds}}
-         {{#if this.first_in_a_row}}
-          {{> productFeedFirst}}
-         {{else}}
-          {{> productFeedOther}}
-         {{/if}}
+          <div class="timelineItem">
+            <div class="timelineSidebar">
+              <div class="timelineBookmark">
+                <div class="timelineBookmarkFirstRow">
+                  <div class="timelineBookmarkInfo">
+                    <span class="timelineBookmarkInfoUsername">{{this.user_name}}</span>
+                    <span class="timelineBookmarkInfoTimestamp">
+                      <span class="timelineBookmarkInfoTimestampContent">
+                        <!--{{How much time ago}}-->
+                        6 minutes ago
+                      </span>
+                    </span>
+                  </div>
+                  <img class="timelineBookmarkAvatar Image iLoaded"  src="/no-profile-image.jpg"/>
+                </div>
+              </div>
+            </div>
+            <div class="timelineCenter">
+              <div class="timelineCard">
+                <!--<div class="product-title productNameStyling" style="color: #000">{{this.name}}</div>-->
+                <div class="mediaPhoto product-block">
+                  <!--<span class="i-like-big"></span>-->
+                 <a href="/{{pagePref.locale_name}}/product/{{this.product_id}}"> <img class="timelinePhoto Frame Image iLoaded iWithTransition"
+                       src="{{this.image_url}}"/></a>
+                  <div class="product-details-ct hover">
+                    <div class="product-details row " style="margin-top: -20px; ">
+                      <div class="product-title productNameStyling col-sm-64 col-md-64 col-lg-60">
+                        {{this.name}}
+                      </div>
+                      <div class="product-designer-text text-3 col-sm-64 col-md-64 col-lg-64">
+                        by <div class="product-designer-name">
+                        <span class="text-3">{{this.designer_name}}</span>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                    <!--style="background-image: url('{{this.image_url}}');" >-->
+                   <!--</div>-->
+                </div>
+                <div class="timelineLikes">
+                  <div class="timelineLikeList">
+                <span class="LikeList">
+                  <span class="llNameLink">{{this.users}}</span>
+                </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         {{/each}}
-      </div>
-    </div>
+  </div>
   </div>
 </template>

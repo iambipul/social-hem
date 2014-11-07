@@ -19,7 +19,6 @@
   @media (max-width:$screen-xs-max){
     padding: 10px 15px;
   }
-  padding: 10px;
   position: relative;
 }
 
@@ -125,6 +124,7 @@
     width: 100%;
     position: absolute;
     top:0;
+    left:0;
     cursor: pointer;
     visibility: hidden;
     color: $hem-color-6;
