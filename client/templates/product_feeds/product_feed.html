@@ -1,19 +1,20 @@
 <template name="productFeed">
 <div class="product-block-ct">
-  <a href="/en-gb/product/levels-lamp-small-copper-10114/?ref=br.86.sku_list_prod">
+
+  <a href="/{{pagePref.locale_name}}/product/{{this.product_id}}/?ref=feed">
     <img data-size-list-retina="[&quot;1160x653&quot;, &quot;2006x1128&quot;, &quot;700x394&quot;, &quot;1064x598&quot;, &quot;2006x1128&quot;]"
          data-size-list="[&quot;580x326&quot;, &quot;950x534&quot;, &quot;350x197&quot;, &quot;532x299&quot;, &quot;950x534&quot;]"
-         alt="Levels Lamp Small Copper" class="img-responsive product-image "
-         src="//d1w8j6pmwcehqo.cloudfront.net/assets/images/us/product/10114-1411836069-primary-532x299.png">
+         alt="{{this.name}}" class="img-responsive product-image "
+         src="{{this.image_url}}">
 
     <div class="product-details-ct hover">
       <div class="product-details row " style="margin-top: -44.5px;">
         <div class="product-title productNameStyling col-sm-64 col-md-64 col-lg-60">
-          Levels Lamp Small Copper
+          {{this.name}}
         </div>
         <div class="product-designer-text text-3 col-sm-64 col-md-64 col-lg-64">
           by <div class="product-designer-name">
-          <span href="/en-gb/designer/form-us-with-love/?ref=br.86.sku_list_des" class="text-3">Form Us With Love</span>
+          <span class="text-3">{{this.designer_name}}</span>
         </div>
         </div>
       </div>
