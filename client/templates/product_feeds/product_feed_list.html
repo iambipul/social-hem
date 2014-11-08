@@ -1,4 +1,5 @@
 <template name="productFeedList">
+  {{> feedFilter}}
   <div class="wrapper">
   <div class="timelineContainer">
         {{#each productFeeds}}
@@ -25,8 +26,9 @@
                 <!--<div class="product-title productNameStyling" style="color: #000">{{this.name}}</div>-->
                 <div class="mediaPhoto product-block">
                   <!--<span class="i-like-big"></span>-->
-                 <a href="/{{pagePref.locale_name}}/product/{{this.product_id}}"> <img class="timelinePhoto Frame Image iLoaded iWithTransition"
-                       src="{{this.image_url}}"/></a>
+                 <img class="timelinePhoto Frame Image iLoaded iWithTransition"
+                       src="{{this.image_url}}"/>
+                  <a href="/{{pagePref.locale_name}}/product/{{this.product_id}}">
                   <div class="product-details-ct hover">
                     <div class="product-details row " style="margin-top: -20px; ">
                       <div class="product-title productNameStyling col-sm-64 col-md-64 col-lg-60">
@@ -39,13 +41,18 @@
                       </div>
                       </div>
                   </div>
+                  </a>
                     <!--style="background-image: url('{{this.image_url}}');" >-->
                    <!--</div>-->
                 </div>
-                <div class="timelineLikes">
+                <div class="timelineLikes" style="text-align: center">
                   <div class="timelineLikeList">
                 <span class="LikeList">
-                  <span class="llNameLink">{{this.users}}</span>
+                  {{#if this.users}}
+                    <span class="llNameLink">{{this.users}}</span>
+                  {{else}}
+                    <span class="llNameLink">{{this.user_name}} bought it for the first time!</span>
+                  {{/if}}
                 </span>
                   </div>
                 </div>
@@ -55,4 +62,5 @@
         {{/each}}
   </div>
   </div>
+
 </template>
