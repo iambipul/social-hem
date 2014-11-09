@@ -7,9 +7,9 @@ Template.productFeedList.helpers({
     var url = document.URL.split('/');
     var product_category = url[url.length - 1];
     if(product_category == 'All'){
-      collection =  ProductFeeds.find({}, {sort: {createdAt: -1}, limit: 200});
+      collection =  ProductFeeds.find({}, {sort: {createdAt: -1},  limit: Session.get("feedLimit")});
     }else{
-      collection = ProductFeeds.find({product_category: product_category}, {sort: {createdAt: -1}, limit: 200});
+      collection = ProductFeeds.find({product_category: product_category}, {sort: {createdAt: -1},  limit: Session.get("feedLimit")});
     }
 
     collection.forEach(function(feed){
@@ -38,6 +38,35 @@ Template.productFeedList.helpers({
     return {
       locale_name: 'en-gb',
       region_pref: 2
-    };
+    }
+  },
+
+  moreResults: function(){
+    return !(ProductFeeds.find().count() < Session.get("feedLimit"));
   }
 });
+
+
+function showMoreVisible() {
+  var threshold, target = $("#showMoreResults");
+  if (!target.length) return;
+
+  threshold = $(window).scrollTop() + $(window).height() - target.height();
+//  console.log(threshold + "--" + target.offset().top + '')
+  if (target.offset().top <= threshold) {
+    if (!target.data("visible")) {
+//      console.log("target became visible (inside viewable area)");
+      target.data("visible", true);
+      Session.set("feedLimit",
+          Session.get("feedLimit") + ITEMS_INCREMENT);
+    }
+  } else {
+    if (target.data("visible")) {
+//      console.log("target became invisible (below viewable arae)");
+      target.data("visible", false);
+    }
+  }
+}
+
+
+$(window).scroll(showMoreVisible);
