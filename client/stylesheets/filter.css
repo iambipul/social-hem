@@ -2,9 +2,9 @@
 /* OPTIONS */
 /* STYLES */
 section#content {
-  width: 240px;
+  width: 200px;
   position: fixed;
-  left: 80%;
+  left: 83%;
   top: 110px;
   text-align: center;
 }
@@ -19,7 +19,7 @@ div.dropdown {
   text-align: left;
   font-size: 0.9em;
   color: #f0f0f0;
-  text-shadow: 0px 1px 1px black;
+  /*text-shadow: 0px 1px 1px black;*/
   width: inherit;
 }
 div.dropdown.closed ul {

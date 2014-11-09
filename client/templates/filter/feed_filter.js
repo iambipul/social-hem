@@ -1,6 +1,8 @@
 Template.feedFilter.helpers({
   productCategories: function() {
-    return ['All', 'Furniture', 'Lighting'];
+    var myArray = ProductFeeds.find().fetch();
+    var distinctArray = _.uniq(myArray, false, function(arr) {return arr.product_category})
+    return ['All'].concat(_.pluck(distinctArray, "product_category"));
   },
 
   currentCategory: function(){
