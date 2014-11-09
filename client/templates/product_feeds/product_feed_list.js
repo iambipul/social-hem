@@ -7,9 +7,9 @@ Template.productFeedList.helpers({
     var url = document.URL.split('/');
     var product_category = url[url.length - 1];
     if(product_category == 'All'){
-      collection =  ProductFeeds.find();
+      collection =  ProductFeeds.find({}, {sort: {createdAt: -1}, limit: 200});
     }else{
-      collection = ProductFeeds.find({product_category: product_category});
+      collection = ProductFeeds.find({product_category: product_category}, {sort: {createdAt: -1}, limit: 200});
     }
 
     collection.forEach(function(feed){

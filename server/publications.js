@@ -1,5 +1,5 @@
 Meteor.publish('productFeeds', function() {
-  return ProductFeeds.find({}, {sort: {createdAt: -1}, limit: 200});
+  return ProductFeeds.find({});//, {sort: {createdAt: -1}, limit: 200});
 });
 
 Meteor.startup(function () {
