@@ -11,8 +11,11 @@
                     <span class="timelineBookmarkInfoUsername">{{this.user_name}}</span>
                     <span class="timelineBookmarkInfoTimestamp">
                       <span class="timelineBookmarkInfoTimestampContent">
-                        <!--{{How much time ago}}-->
-                        6 minutes ago
+                        {{#if this.saved_product_id}}
+                          designed it
+                        {{else}}
+                          bought it
+                        {{/if}}
                       </span>
                     </span>
                   </div>
@@ -28,7 +31,7 @@
                   <!--<span class="i-like-big"></span>-->
                  <img class="timelinePhoto Frame Image iLoaded iWithTransition"
                        src="{{this.image_url}}"/>
-                  <a href="/{{pagePref.locale_name}}/product/{{this.product_id}}">
+                  <a href="/{{pagePref.locale_name}}{{this.product_url}}">
                   <div class="product-details-ct hover">
                     <div class="product-details row " style="margin-top: -20px; ">
                       <div class="product-title productNameStyling col-sm-64 col-md-64 col-lg-60">
@@ -42,16 +45,18 @@
                       </div>
                   </div>
                   </a>
-                    <!--style="background-image: url('{{this.image_url}}');" >-->
-                   <!--</div>-->
                 </div>
                 <div class="timelineLikes" style="text-align: center">
                   <div class="timelineLikeList">
                 <span class="LikeList">
-                  {{#if this.users}}
-                    <span class="llNameLink">{{this.users}}</span>
+                  {{#if this.saved_product_id}}
+                    If you like it, you can buy it!
                   {{else}}
-                    <span class="llNameLink">{{this.user_name}} bought it for the first time!</span>
+                    {{#if this.users}}
+                      <span class="llNameLink">{{this.users}}</span>
+                    {{else}}
+                      <span class="llNameLink">{{this.user_name}} bought it for the first time!</span>
+                    {{/if}}
                   {{/if}}
                 </span>
                   </div>

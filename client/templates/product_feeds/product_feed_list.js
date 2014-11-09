@@ -17,10 +17,12 @@ Template.productFeedList.helpers({
       if (feed['saved_product_id']){
         if(saved_product_ids[feed['saved_product_id']]) return;
         all_feed_count =  ProductFeeds.find({saved_product_id: feed.saved_product_id,feed_type: "order"}).count();
+        feed.product_url = '/' + feed.tool_type + '/' + feed.saved_product_id;
         saved_product_ids[feed['saved_product_id']] = true;
       }else{
         if(product_ids[feed['product_id']]) return;
         all_feed_count =  ProductFeeds.find({product_id: feed.product_id,feed_type: "order"}).count();
+        feed.product_url = '/product/' + feed.product_id;
         product_ids[feed['product_id']] = true;
       }
       feed.name = feed.name["en-gb"];
