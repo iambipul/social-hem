@@ -27,7 +27,7 @@ Template.productFeedList.helpers({
       }
       feed.name = feed.name["en-gb"];
       if(all_feed_count > 1){
-        feed.users = (all_feed_count - 1) + " more people also bought this"
+        feed.users = (all_feed_count - 1) + " more person also bought this"
       }
       feeds.push(feed);
     });
